@@ -7,7 +7,8 @@ mod crypto {
 
         println!();
         if let Ok(v) = env::var("DEP_OPENSSL_VERSION_NUMBER") {
-            let version = u64::from_str_radix(&v, 16).expect("Failed to parse OpenSSL version in build.rs");
+            let version =
+                u64::from_str_radix(&v, 16).expect("Failed to parse OpenSSL version in build.rs");
 
             if version >= 0x3_00_00_00_0 {
                 return;
