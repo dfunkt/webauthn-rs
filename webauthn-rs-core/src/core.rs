@@ -75,6 +75,7 @@ pub struct ChallengeRegisterBuilder {
     require_resident_key: bool,
     authenticator_attachment: Option<AuthenticatorAttachment>,
     attestation_formats: Option<Vec<AttestationFormat>>,
+    allow_backup_eligible_upgrade: bool,
     reject_synchronised_authenticators: bool,
     hints: Option<Vec<PublicKeyCredentialHints>>,
 }
